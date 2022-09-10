@@ -107,4 +107,31 @@ body {
             background: #e6af2e;
             width: 300px;
         }
-       
+
+/* De 0 a 800 aplica los siguientes estilos */
+@media all and (max-width: 800px) {
+    .menu {
+        flex-direction: column;
+        height: auto;
+        
+    }
+    .section {
+        flex-direction: column;
+    }
+    .aside {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .articulos {
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 400px) {
+    .aside {
+        flex-direction: column;
+    }
+}
