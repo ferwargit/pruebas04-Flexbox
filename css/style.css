@@ -11,26 +11,48 @@ body {
 
 .padre {
     background-color: blueviolet;
+
+    display: flex;
+
+    /* flex-direction: column; */
+    /* Para que se adapte al tamaño establecido */
+    /* y se muestre en una misma linea */
+    /* flex-wrap: nowrap; */
+
+    flex-flow: column nowrap;
 }
 
     .header {
         background: #000;
+        display: flex;
+        flex-flow: column nowrap;
     }
 
         .menu {
             background: #2d4059;
+            display: flex;
+            flex-flow: row nowrap;
+            height: 100px;
+            align-items: center;
+            
         }
 
             .logo {
                 background: #ea5455;
+                flex: 1 1 auto;
+                height: 30px;
             }
 
             .nav {
                 background: #ea5455;
+                flex: 5 1 auto;
+                height: 30px;
             }
 
             .social {
                 background: #ea5455;
+                flex: 1 1 auto;
+                height: 30px;
             }
 
         .texto-principal {
@@ -43,22 +65,31 @@ body {
 
     .section {
         background: #000;
+        display: flex;
     }   
 
         .articulos {
             background: #4e4e6a;
+            flex: 2 1 auto;
+            display: flex;
+            /* Con wrap si el ultimo contenedor no entra */
+            /* en la linea, se crea una nueva linea */
+            flex-flow: row wrap;
         }
 
             .article {
                 background: #1f6cb0;
+                flex: 1 1 40%;
             }
 
             .navegacion {
                 background: #70a3c4;
+                flex: 1 1 100%;
             }
         
         .aside {
             background: #f73f52;
+            flex: 1 1 auto;
         }
 
             .publicidad {
@@ -67,10 +98,13 @@ body {
 
     .footer {
         background: #000;
+        display: flex;
+        justify-content: center;
     }
 
         .pie 
         {
             background: #e6af2e;
+            width: 300px;
         }
        
